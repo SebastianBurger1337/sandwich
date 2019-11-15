@@ -1,4 +1,22 @@
 package de.hamcheese.sandwich.entity
 
-class Customer {
-}
+import org.springframework.data.annotation.Id
+import sun.security.x509.CRLDistributionPointsExtension
+import javax.persistence.Entity
+import javax.persistence.GenerationType
+import javax.persistence.GeneratedValue
+
+
+
+@Entity
+class Customer (
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    val id: Long? = null,
+    val firstName: String,
+    val lastName: String,
+    val points : Int
+
+
+)
